@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calcu{
+            color: grey;
+            margin-left: 400px;
+            margin-top: 50px;
+            background-color: grey;
+            width: 600px;
+        }
+        .calc{
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 350px;
+            height: 90px;
+
+        }
+        button{
+            margin-bottom: 20px;
+            height: 90px;
+            width: 140px
+        }
+        table{
+            margin-left: 20px;
+        }
+        .clrbtn{
+            margin-bottom: 50px;
+            margin-top: 50px;
+            height: 50px;
+            width: 100px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="calcu">
+        <input class="calc" type="text" name="" id="result">
+        <button class="clrbtn" onclick="document.getElementById('result').value = '' " style="background: red;" onclick="clearInterval"><h1>C</h1></button>
+        <table>
+        
+            <tr>
+                <td><button onclick="display('7')"><h1>7</h1></button></td>
+                <td><button onclick="display('8')"><h1>8</h1></button></td>
+                <td><button onclick="display('9')"><h1>9</h1></button></td>
+                <td><button style="background: yellow;" onclick="display('/')"><h1>/</h1></button></td>
+                
+            </tr>
+            <tr>
+                <td><button onclick="display('4')"><h1>4</h1></button></td>
+                <td><button onclick="display('5')"><h1>5</h1></button></td>
+                <td><button onclick="display('6')"><h1>6</h1></button></td>
+                <td><button style="background: yellow;" onclick="display('*')"><h1>*</h1></button></td>
+                
+            </tr>
+            <tr>
+                <td><button onclick="display('1')"><h1>1</h1></button></td>
+                <td><button onclick="display('2')"><h1>2</h1></button></td>
+                <td><button onclick="display('3')"><h1>3</h1></button></td>
+                <td><button style="background: yellow;" onclick="display('-')"><h1>-</h1></button></td>
+                
+            </tr>
+            <tr>
+                <td><button onclick="display('0')"><h1>0</h1></button></td>
+                <td><button onclick="display('.')"><h1>.</h1></button></td>
+                <td><button style="background: rgb(99, 206, 248);" onclick="result()" ><h1>=</h1></button></td>
+                <td><button style="background: yellow;" onclick="display('+')" ><h1>+</h1></button></td>
+                
+            </tr>
+        
+        </table>
+    </div>
+<script>
+    function display(val){
+       document.getElementById("result").value+=val
+
+    }
+    function result(){
+        var txt=document.getElementById("result").value
+        var res=eval(txt)
+        document.getElementById("result").value=res
+        
+    }
+</script>
+</body>
+
+</html>
+
